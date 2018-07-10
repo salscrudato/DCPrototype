@@ -1,0 +1,26 @@
+{
+  "name": "sampleduckfrontend",
+  "version": "1.0.0",
+  "description": "Sample Duck Front End ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "apicache": "^1.2.1",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "ng2-dragula": "^1.5.0",
+    "passport": "*",
+    "passport-jwt": "*",
+    "request": "^2.85.0",
+    "require": "^2.4.20"
+  },
+  "author": "Sal Scrudato",
+  "license": "ISC"
+}

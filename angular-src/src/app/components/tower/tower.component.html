@@ -1,0 +1,47 @@
+<div>
+  <div class='container p-0'>
+    <body class ="bg-light">
+    <div class="row">
+      <div class="col-md-6 m-0">
+        <div class="form-group row mt-2" align="horizontal-center">
+          <label class="mr-3" style="width:150px">Carrier Name: </label>
+          <input type="text" style="width:200px" class="form-control" [(ngModel)]="tempName" name="tempName">
+        </div>
+        <div class="form-group row mt-2" align="horizontal-center">
+          <label class="mr-3" style="width:150px">Policy Premium: </label>
+          <input type="text" style="width:200px" class="form-control" [(ngModel)]="tempPolicyPremium" name="tempPolicyPremium">
+        </div>
+      </div>
+      <div class="col-md-6 m-0">
+        <div class="form-group row mt-2" align="horizontal-center">
+          <label class="mr-3" style="width:150px">Full Layer Limit: </label>
+          <input type="text" style="width:200px" class="form-control" [(ngModel)]="tempFullLayerLimit" name="tempFullLayerLimit">
+        </div>
+        <div class="form-group row mt-2" align="horizontal-center">
+          <label class="mr-3" style="width:150px">Attachment Point: </label>
+          <input type="text" style="width:200px" class="form-control" [(ngModel)]="tempAttachmentPoint" name="tempAttachmentPoint">
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-primary btn-sm text-light m-2" style="width:100px" (click)="addItem()">Add Layer</a>
+    <div class='m-5' [dragula]='"underlyingLayerBag"' [dragulaModel]='items'>
+      <div class="card m-2 bg-secondary text-white font-weight-bold" align="center" style="width:auto;height:50px;" *ngFor="let item of items" (click)="showDetails(item)" id="{{item.id}}">{{item.carrier}}</div>
+    </div>
+    <div class="row mt-2" *ngIf="showDetailsBool">
+      <h2>Edit Layer details for {{editCarrierName}}</h2>
+      <div class="col-md-6 m-0">
+        <div class="form-group row mt-2" align="horizontal-center">
+          <label class="mr-3" style="width:150px">Policy Premium: </label>
+          <input type="text" style="width:200px" class="form-control" [(ngModel)]="editPolicyPremium" name="editPolicyPremium">
+        </div>
+      </div>
+      <div class="col-md-6 m-0">
+      </div>
+      <a class="btn btn-primary btn-sm text-light m-2" (click)="editLayerDetails()" style="width:150px">Update Layer Details</a>
+    </div>
+    <footer class="my-5 pt-5 text-muted text-small">
+      <p class="mb-1">&copy; Copyright EY</p>
+    </footer>
+  </body>
+  </div>
+</div>
